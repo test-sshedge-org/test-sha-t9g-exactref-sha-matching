@@ -1,0 +1,13 @@
+name: T9g - Exact-ref allowlist entry, full SHA resolved from the allowed tag
+
+on:
+  push:
+  workflow_dispatch:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Call action using the full SHA that pnpm/action-setup@v4 resolves to
+        uses: pnpm/action-setup@b906affcce14559ad1aafd4ab0e942779e9f58b1
+        continue-on-error: true
